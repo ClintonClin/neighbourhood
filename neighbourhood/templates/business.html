@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load staticfiles %}
+
+
+{% block content %}
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-12 top-div" style="margin-top:40px;"></div>
+    </div>
+
+    <div class="text-center">
+        <a href="{% url 'new-business' %}">
+            <button class="btn btn-primary" style="height:50px;  margin-top: -6px;">Business registration</button>
+        </a>
+    </div>
+
+    <div class="row">
+        {% for business in businesses %}
+        <div class="col-md-6">
+            <div class="card" style="width: 20rem;margin-top:10px;">
+                <div class="card-body">
+                    <h3 class="card-title" data-toggle="modal" data-target="#{{business.id}}">{{business.name|truncatechars:19}}</h3>
+                </div>
+            </div>
+        </div>
+        {% empty %}
+        <div class="col-md-4">
+            <h2>Add Businesses</h2>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,5 @@
+Hello {{name}},
+
+Welcome to The Hood. I am excited to have you in my platform.
+If you are receiving this email, it can be assumed that you already conversant with what the application offers.
+Incase of ant bugs, feel free to report them.
