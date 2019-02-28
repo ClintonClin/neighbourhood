@@ -12,7 +12,8 @@ Priority=(
 # Create your models here.
 class neighbourhood(models.Model):
     neighbourhood= models.CharField(max_length=100)
-    HOODS = (('Roysambu', 'Roysambu',),)
+    HOODS = (('Roysambu', 'Roysambu',),
+             ('Roysambu', 'Juja',),)
     hood_name = models.CharField(max_length=50)
     hood_location = models.CharField(max_length=50, choices=HOODS)
     hood_description = models.TextField(max_length=240)
